@@ -15,7 +15,7 @@ public class Languages_skill {
 	@Column (name= "languagesskill_id ")
 	private int languagesskill;
 	
-	@Id
+	//@Id
 	@Column (name= "candidato_id ")
 	private int candidato_id;
 		
