@@ -12,17 +12,19 @@ public class Country {
 	
 	@Id
 	@Column (name= "country_id")
-	private int country;
+	private int country_id;
 	
 	@Column (name = "country")
 	private String countryName;
 
-	public int getCountry() {
-		return country;
+	
+
+	public int getCountry_id() {
+		return country_id;
 	}
 
-	public void setCountry(int country) {
-		this.country = country;
+	public void setCountry_id(int country_id) {
+		this.country_id = country_id;
 	}
 
 	public String getCountryName() {

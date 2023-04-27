@@ -61,11 +61,11 @@ public class Candidato {
 	
 	@ManyToOne
 	@JoinColumn(name= "gender_id")
-	private Gender gender;
+	private Gender gender_id;
 
 	@ManyToOne
 	@JoinColumn(name= "city_id")
-	private City city;
+	private City city_id;
 	
 	@ManyToOne
 	@JoinColumn(name= "countryOfOrigin_id")
@@ -77,7 +77,7 @@ public class Candidato {
 	@OneToMany (mappedBy = "candidato_id", fetch = FetchType. EAGER, cascade = {CascadeType.ALL})
 	private Set<WorkExperience> workExperience_id;
 	
-	@OneToMany (mappedBy = "languagesskill", fetch = FetchType. EAGER, cascade = {CascadeType.ALL})
+	@OneToMany (mappedBy = "candidato_id", fetch = FetchType. EAGER, cascade = {CascadeType.ALL})
 	private Set<Languages_skill> languagesskill_id;
 	
 	@ManyToMany
@@ -87,12 +87,7 @@ public class Candidato {
 			inverseJoinColumns = @JoinColumn(name = "areaInterest_id")
 			)
 	
-	private List<Area_interest> areaInterest;
-	
-	
-	public List<Area_interest> getArea_interest(){
-		return areaInterest;
-	}
+	private List<Area_interest> areaInterest_id;
 	
 	@ManyToMany
 	@JoinTable(
@@ -102,7 +97,6 @@ public class Candidato {
 			)
 	
 	private List<Disability_type> disability;
-
 
 	public int getCandidato_id() {
 		return candidato_id;
@@ -200,20 +194,20 @@ public class Candidato {
 		this.addressStreet = addressStreet;
 	}
 
-	public Gender getGender() {
-		return gender;
+	public Gender getGender_id() {
+		return gender_id;
 	}
 
-	public void setGender(Gender gender) {
-		this.gender = gender;
+	public void setGender_id(Gender gender_id) {
+		this.gender_id = gender_id;
 	}
 
-	public City getCity() {
-		return city;
+	public City getCity_id() {
+		return city_id;
 	}
 
-	public void setCity(City city) {
-		this.city = city;
+	public void setCity_id(City city_id) {
+		this.city_id = city_id;
 	}
 
 	public Country_Origin getCountry_Origin() {
@@ -248,12 +242,12 @@ public class Candidato {
 		this.languagesskill_id = languagesskill_id;
 	}
 
-	public List<Area_interest> getAreaInterest() {
-		return areaInterest;
+	public List<Area_interest> getAreaInterest_id() {
+		return areaInterest_id;
 	}
 
-	public void setAreaInterest(List<Area_interest> areaInterest) {
-		this.areaInterest = areaInterest;
+	public void setAreaInterest_id(List<Area_interest> areaInterest_id) {
+		this.areaInterest_id = areaInterest_id;
 	}
 
 	public List<Disability_type> getDisability() {
@@ -265,9 +259,6 @@ public class Candidato {
 	}
 
 
-
-
-	
 	
 
 }
