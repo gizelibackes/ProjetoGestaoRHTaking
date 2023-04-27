@@ -7,5 +7,10 @@ public interface RoleService {
 	
 	List<Role> listarTodos();
 
-
+	Role obterPorId(int id);
+	
+/*
+	//OBTER POR ROLE
+	Role obterPorRole_id(int role_id);
+*/
 }

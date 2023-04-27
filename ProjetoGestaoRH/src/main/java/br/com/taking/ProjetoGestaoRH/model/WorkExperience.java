@@ -38,15 +38,9 @@ public class WorkExperience {
 	@Column(name = "endYear")
 	private Date endYear;
 	
-	
-	//@ManyToOne (optional = true)
-	//@JoinColumn(name= "candidato_id")
-	//private Candidato candidato;
-
-	
 	@ManyToOne (optional = true)
 	@JoinColumn(name= "role_id")
-	private Role role;
+	private Role role_id;
 
 
 	public int getWorkExperience_id() {
@@ -129,20 +123,14 @@ public class WorkExperience {
 	}
 
 
-	public Role getRole() {
-		return role;
+	public Role getRole_id() {
+		return role_id;
 	}
 
 
-	public void setRole(Role role) {
-		this.role = role;
+	public void setRole_id(Role role_id) {
+		this.role_id = role_id;
 	}
-
-
-
-
-
-
 
 	
 

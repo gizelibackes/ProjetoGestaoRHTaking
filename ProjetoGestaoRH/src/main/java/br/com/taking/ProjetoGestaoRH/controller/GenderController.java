@@ -26,5 +26,6 @@ public class GenderController {
 		return new ResponseEntity<List<Gender>> (resultado, HttpStatus.OK);
 		
 	}
+	
 
 }

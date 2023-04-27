@@ -12,17 +12,17 @@ public class Gender {
 	
 	@Id
 	@Column (name= "gender_id")
-	private int gender;
+	private int gender_id;
 	
 	@Column (name = "gender")
 	private String genderName;
 
-	public int getGender() {
-		return gender;
+	public int getGender_id() {
+		return gender_id;
 	}
 
-	public void setGender(int gender) {
-		this.gender = gender;
+	public void setGender_id(int gender_id) {
+		this.gender_id = gender_id;
 	}
 
 	public String getGenderName() {
@@ -32,7 +32,10 @@ public class Gender {
 	public void setGenderName(String genderName) {
 		this.genderName = genderName;
 	}
-		
+
+	
+	
+
 	
 	
 

@@ -1,6 +1,7 @@
 package br.com.taking.ProjetoGestaoRH.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,6 +22,18 @@ public class WorkExperienceServiceImpl implements WorkExperienceService{
 	
 		return workexperienceRepository.findAll();
 	}
+
+
+	@Override
+	public WorkExperience obterPorId(int id) {
+		Optional<WorkExperience> result = workexperienceRepository.findById(id);
+		if(result.isPresent()) {
+			return result.get();
+			}else {
+				return null;
+			}
+	}
+	
 
 
 }

@@ -6,6 +6,9 @@ import br.com.taking.ProjetoGestaoRH.model.WorkExperience;
 public interface WorkExperienceService {
 
 	List<WorkExperience> listarTodos();
+	
+	WorkExperience obterPorId(int id);
+
 
 	
 }

@@ -16,7 +16,7 @@ public class State {
 	
 	@Id
 	@Column (name= "state_id")
-	private int state;
+	private int state_id;
 	
 	@Column (name = "state")
 	private String stateName;
@@ -27,13 +27,15 @@ public class State {
 	private Country country;
 
 
-	public int getState() {
-		return state;
+	
+
+	public int getState_id() {
+		return state_id;
 	}
 
 
-	public void setState(int state) {
-		this.state = state;
+	public void setState_id(int state_id) {
+		this.state_id = state_id;
 	}
 
 

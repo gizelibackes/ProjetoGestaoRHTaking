@@ -61,11 +61,11 @@ public class Candidato {
 	
 	@ManyToOne
 	@JoinColumn(name= "gender_id")
-	private Gender gender;
+	private Gender gender_id;
 
 	@ManyToOne
 	@JoinColumn(name= "city_id")
-	private City city;
+	private City city_id;
 	
 	@ManyToOne
 	@JoinColumn(name= "countryOfOrigin_id")
@@ -87,12 +87,7 @@ public class Candidato {
 			inverseJoinColumns = @JoinColumn(name = "areaInterest_id")
 			)
 	
-	private List<Area_interest> areaInterest;
-	
-	
-	//public List<Area_interest> getArea_interest(){
-	//	return areaInterest;
-	//}
+	private List<Area_interest> areaInterest_id;
 	
 	@ManyToMany
 	@JoinTable(
@@ -103,211 +98,167 @@ public class Candidato {
 	
 	private List<Disability_type> disability;
 
-
 	public int getCandidato_id() {
 		return candidato_id;
 	}
-
 
 	public void setCandidato_id(int candidato_id) {
 		this.candidato_id = candidato_id;
 	}
 
-
 	public String getFirstName() {
 		return firstName;
 	}
-
 
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
 
-
 	public String getLastName() {
 		return lastName;
 	}
-
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
 
-
 	public String getEmail() {
 		return email;
 	}
-
 
 	public void setEmail(String email) {
 		this.email = email;
 	}
 
-
 	public Date getBirthdate() {
 		return birthdate;
 	}
-
 
 	public void setBirthdate(Date birthdate) {
 		this.birthdate = birthdate;
 	}
 
-
 	public String getIdentificationDocument() {
 		return identificationDocument;
 	}
-
 
 	public void setIdentificationDocument(String identificationDocument) {
 		this.identificationDocument = identificationDocument;
 	}
 
-
 	public String getLinkedinProfileUrl() {
 		return linkedinProfileUrl;
 	}
-
 
 	public void setLinkedinProfileUrl(String linkedinProfileUrl) {
 		this.linkedinProfileUrl = linkedinProfileUrl;
 	}
 
-
 	public String getMobileNumber() {
 		return mobileNumber;
 	}
-
 
 	public void setMobileNumber(String mobileNumber) {
 		this.mobileNumber = mobileNumber;
 	}
 
-
 	public String getPhoneNumber() {
 		return phoneNumber;
 	}
-
 
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 
-
 	public String getAddressZipCode() {
 		return addressZipCode;
 	}
-
 
 	public void setAddressZipCode(String addressZipCode) {
 		this.addressZipCode = addressZipCode;
 	}
 
-
 	public String getAddressNumber() {
 		return addressNumber;
 	}
-
 
 	public void setAddressNumber(String addressNumber) {
 		this.addressNumber = addressNumber;
 	}
 
-
 	public String getAddressStreet() {
 		return addressStreet;
 	}
-
 
 	public void setAddressStreet(String addressStreet) {
 		this.addressStreet = addressStreet;
 	}
 
-
-	public Gender getGender() {
-		return gender;
+	public Gender getGender_id() {
+		return gender_id;
 	}
 
-
-	public void setGender(Gender gender) {
-		this.gender = gender;
+	public void setGender_id(Gender gender_id) {
+		this.gender_id = gender_id;
 	}
 
-
-	public City getCity() {
-		return city;
+	public City getCity_id() {
+		return city_id;
 	}
 
-
-	public void setCity(City city) {
-		this.city = city;
+	public void setCity_id(City city_id) {
+		this.city_id = city_id;
 	}
-
 
 	public Country_Origin getCountry_Origin() {
 		return Country_Origin;
 	}
 
-
 	public void setCountry_Origin(Country_Origin country_Origin) {
 		Country_Origin = country_Origin;
 	}
-
 
 	public Set<Academic_qualification> getAcademicQualification_id() {
 		return academicQualification_id;
 	}
 
-
 	public void setAcademicQualification_id(Set<Academic_qualification> academicQualification_id) {
 		this.academicQualification_id = academicQualification_id;
 	}
-
 
 	public Set<WorkExperience> getWorkExperience_id() {
 		return workExperience_id;
 	}
 
-
 	public void setWorkExperience_id(Set<WorkExperience> workExperience_id) {
 		this.workExperience_id = workExperience_id;
 	}
-
 
 	public Set<Languages_skill> getLanguagesskill_id() {
 		return languagesskill_id;
 	}
 
-
 	public void setLanguagesskill_id(Set<Languages_skill> languagesskill_id) {
 		this.languagesskill_id = languagesskill_id;
 	}
 
-
-	public List<Area_interest> getAreaInterest() {
-		return areaInterest;
+	public List<Area_interest> getAreaInterest_id() {
+		return areaInterest_id;
 	}
 
-
-	public void setAreaInterest(List<Area_interest> areaInterest) {
-		this.areaInterest = areaInterest;
+	public void setAreaInterest_id(List<Area_interest> areaInterest_id) {
+		this.areaInterest_id = areaInterest_id;
 	}
-
 
 	public List<Disability_type> getDisability() {
 		return disability;
 	}
-
 
 	public void setDisability(List<Disability_type> disability) {
 		this.disability = disability;
 	}
 
 
-
-
-
-	
 	
 
 }
