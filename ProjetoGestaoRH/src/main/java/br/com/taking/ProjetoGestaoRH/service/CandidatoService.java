@@ -11,32 +11,11 @@ public interface CandidatoService {
 	List<Candidato> listarTodos();
 	
 	Candidato obterPorId(int id);
-	
-	
-	//ATRIBUTOS NATIVOS DA CLASSE CANDIDATO
-	List<Candidato> findByIdentificationDocument(String identification);
-	//List<Candidato> obterPorBirthdate(Date birthdate);
-	
-	
-	//ATRIBUTOS COM RELACIONAMENTO @ManyToOne COM A CLASSE CANDIDATO
-	List<Candidato> obterPorGender(int gender);
-	
-	//ATRIBUTOS COM RELACIONAMENTO @ManyToMany COM A CLASSE CANDIDATO
-	List<Candidato> obterPorAreaInterest(int area_interest);
-	//List<Candidato> obterPorAreaInterest(int areaInterest);
-	//List<Candidato> findByAreaInteresse(int areaInterest_id);
-	
 
-	
-	//List<Candidato> obterPorWorkExperience(int workExperience);
-	
-
-	
-	//List<Candidato> obterPorLanguagesSkill(int languagesskill);
-	
-	//List<Candidato> obterPorAcademicQualification(int academicQualification);
-	
-	//List<Candidato> obterPorCity(int city);
-	 
+	List<Candidato> ObterCandidato(String identificationDocument, int gender, int area_interest,
+			String areaInterestname, int role, int formation, int institution, int course, String coursename,
+			String institutionname, int status, int city, int state, int country, int languages, int level, Date age,
+			Date ageini, Date agefim);
+		 
 
 }

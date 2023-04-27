@@ -12,17 +12,17 @@ public class Languages {
 	
 	@Id
 	@Column (name= "language_id ")
-	private int language;
+	private int language_id;
 	
 	@Column (name = "language")
 	private String languageName;
 
-	public int getLanguage() {
-		return language;
+	public int getLanguage_id() {
+		return language_id;
 	}
 
-	public void setLanguage(int language) {
-		this.language = language;
+	public void setLanguage_id(int language_id) {
+		this.language_id = language_id;
 	}
 
 	public String getLanguageName() {
@@ -32,7 +32,7 @@ public class Languages {
 	public void setLanguageName(String languageName) {
 		this.languageName = languageName;
 	}
-	
+
 	
 
 	
