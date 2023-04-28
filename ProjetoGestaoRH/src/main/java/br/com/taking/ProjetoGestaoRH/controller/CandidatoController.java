@@ -1,6 +1,5 @@
 package br.com.taking.ProjetoGestaoRH.controller;
 
-import java.sql.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,7 +45,7 @@ public class CandidatoController {
 	//OBTER POR CANDIDATO
 	@RequestMapping(value = "/candidato/identificationdocument/{identificationDocument}", method = RequestMethod.GET)
 	public ResponseEntity<List<Candidato>> findByCandidato(@PathVariable(value = "identificationDocument") String identificationDocument){
-		List<Candidato> candidato = candidatoService.ObterCandidato(identificationDocument, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+		List<Candidato> candidato = candidatoService.ObterCandidato(identificationDocument, 0, 0, null, 0, null, null, 0, 0, 0, null, null, 0, 0, 0, 0, 0, 0, 0, null, null);
 		 if(candidato != null) {
 			 return new ResponseEntity<>(candidato, HttpStatus.OK );
 			}else {
@@ -54,7 +53,6 @@ public class CandidatoController {
 			
 		 }
 	} 	
-
     
 	
 }
