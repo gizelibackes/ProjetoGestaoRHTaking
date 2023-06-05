@@ -38,93 +38,17 @@ public class CandidatoServiceImpl implements CandidatoService{
 			}
 	}
 	
-	//OBTER POR IDENTIFICATION DOCUMENT
+	//OBTER CANDIDATO
 	@Override
-	public List<Candidato> findByIdentificationDocument(String identification) {
-	if(identification != null) {
-		return candidatoRepository.findAll(identification);
-		}else {
-			return null;
-		}
+	public List<Candidato> ObterCandidato(String identificationDocument, int gender, int area_interest, String areaInterestname, int role, String companyName, String activitiesPerformed,int formation, int institution, int course, String coursename, String institutionname, int status, int city, int state, int country, int languages, int level, int age, Date ageini, Date agefim) {
+		
+		
+		return candidatoRepository.findByCandidato(identificationDocument, gender, area_interest, areaInterestname, role, companyName, activitiesPerformed, formation, status, institution, course, coursename, institutionname, city, state, country, languages, level, age, ageini, agefim);
 	}
 	
-	//OBTER POR GENDER
-	@Override
-	public List<Candidato> obterPorGender(int gender) {
-		
-		return candidatoRepository.findByGender(gender);
-		
-		/* Optional<Candidato> result = candidatoRepository.findByGender(gender);
-		if(result.isPresent()) {
-			return result.get();
-			}else {
-				return null;
-			} */
-
-	}
-	
-	//OBTER POR INTEREST AREA
-	@Override
-	public List<Candidato> obterPorAreaInterest(int area_interest) {
-		
-		return candidatoRepository.findByAreaInterest(area_interest);
-
-	}
-	/*
-	 * 
-	 * @Override
-	    public List<Candidato> findByAreaInteresse(int areaInterest_id) {
-	        return candidatoRepository.findByAreaInteresse(areaInterest_id);
-	    }
-	 * 
-	 * 
-	 * 
-	 
-	//OBTER POR LOCALIDADE
-	@Override
-	public List<Candidato> obterPorCity(int city) {
-		
-		return candidatoRepository.findByCity(city);
-
-	}
-	
-	/*
-	//OBTER POR IDADE
-	@Override
-	public List<Candidato> obterPorBirthdate(Date birthdate) {
-		
-		return candidatoRepository.findByBirthdate(birthdate);
-
-	}
-	
-	//OBTER POR WORK EXPERIENCE
-	@Override
-	public List<Candidato> obterPorWorkExperience(int workExperience) {
-		
-		return candidatoRepository.findByWorkExperience(workExperience);
-
-	}
-	*/
-
-	/*
-	//OBTER POR LANGUAGES SKILLS
-	@Override
-	public List<Candidato> obterPorLanguagesSkill(int languagesskill) {
-		
-		return candidatoRepository.findByLanguagesSkill(languagesskill);
-
-	}
-	/*
-	//OBTER POR ACADEMIC QUALIFICATION
-	@Override
-	public List<Candidato> obterPorAcademicQualification(int academicQualification) {
-		
-		return candidatoRepository.findByAcademicQualification(academicQualification);
-
-	} */
-	
-
-	
-	
-
 }
+
+
+
+	
+	

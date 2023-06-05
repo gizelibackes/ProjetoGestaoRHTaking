@@ -33,19 +33,19 @@ public class Academic_qualification {
 	
 	@ManyToOne
 	@JoinColumn(name= "formation_id")
-	private Formation formation;
+	private Formation formation_id;
 	
 	@ManyToOne
 	@JoinColumn(name= "institution_id")
-	private Institution institution;
+	private Institution institution_id;
 	
 	@ManyToOne
 	@JoinColumn(name= "course_id")
-	private Course course;
+	private Course course_id;
 	
 	@ManyToOne
 	@JoinColumn(name= "status_id")
-	private Status status;
+	private Status status_id;
 
 	public int getAcademicQualification_id() {
 		return academicQualification_id;
@@ -95,37 +95,38 @@ public class Academic_qualification {
 		this.candidato_id = candidato_id;
 	}
 
-	public Formation getFormation() {
-		return formation;
+	public Formation getFormation_id() {
+		return formation_id;
 	}
 
-	public void setFormation(Formation formation) {
-		this.formation = formation;
+	public void setFormation_id(Formation formation_id) {
+		this.formation_id = formation_id;
 	}
 
-	public Institution getInstitution() {
-		return institution;
+	public Institution getInstitution_id() {
+		return institution_id;
 	}
 
-	public void setInstitution(Institution institution) {
-		this.institution = institution;
+	public void setInstitution_id(Institution institution_id) {
+		this.institution_id = institution_id;
 	}
 
-	public Course getCourse() {
-		return course;
+	public Course getCourse_id() {
+		return course_id;
 	}
 
-	public void setCourse(Course course) {
-		this.course = course;
+	public void setCourse_id(Course course_id) {
+		this.course_id = course_id;
 	}
 
-	public Status getStatus() {
-		return status;
+	public Status getStatus_id() {
+		return status_id;
 	}
 
-	public void setStatus(Status status) {
-		this.status = status;
+	public void setStatus_id(Status status_id) {
+		this.status_id = status_id;
 	}
+
 
 	
 

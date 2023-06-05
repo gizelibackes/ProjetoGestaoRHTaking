@@ -14,17 +14,17 @@ public class Level {
 	
 	@Id
 	@Column (name= "level_id ")
-	private int level;
+	private int level_id;
 	
 	@Column (name = "levelName ")
 	private String levelName ;
 
-	public int getLevel() {
-		return level;
+	public int getLevel_id() {
+		return level_id;
 	}
 
-	public void setLevel(int level) {
-		this.level = level;
+	public void setLevel_id(int level_id) {
+		this.level_id = level_id;
 	}
 
 	public String getLevelName() {
@@ -34,6 +34,7 @@ public class Level {
 	public void setLevelName(String levelName) {
 		this.levelName = levelName;
 	}
+
 	
 	
 

@@ -11,17 +11,17 @@ public class Formation {
 	
 	@Id
 	@Column (name= "formation_id ")
-	private int formation;
+	private int formation_id;
 	
 	@Column (name = "formationName  ")
 	private String formationName  ;
 
-	public int getFormation() {
-		return formation;
+	public int getFormation_id() {
+		return formation_id;
 	}
 
-	public void setFormation(int formation) {
-		this.formation = formation;
+	public void setFormation_id(int formation_id) {
+		this.formation_id = formation_id;
 	}
 
 	public String getFormationName() {
@@ -32,7 +32,7 @@ public class Formation {
 		this.formationName = formationName;
 	}
 
-	
+
 
 	
 	

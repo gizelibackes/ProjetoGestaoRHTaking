@@ -12,17 +12,17 @@ public class Institution {
 	
 	@Id
 	@Column (name= "institution_id ")
-	private int institution;
+	private int institution_id;
 	
 	@Column (name = "institutionName ")
 	private String institutionName;
 
-	public int getInstitution() {
-		return institution;
+	public int getInstitution_id() {
+		return institution_id;
 	}
 
-	public void setInstitution(int institution) {
-		this.institution = institution;
+	public void setInstitution_id(int institution_id) {
+		this.institution_id = institution_id;
 	}
 
 	public String getInstitutionName() {
@@ -32,6 +32,7 @@ public class Institution {
 	public void setInstitutionName(String institutionName) {
 		this.institutionName = institutionName;
 	}
+
 
 	
 	

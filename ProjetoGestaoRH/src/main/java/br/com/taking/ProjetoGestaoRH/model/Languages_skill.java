@@ -13,7 +13,7 @@ public class Languages_skill {
 	
 	@Id
 	@Column (name= "languagesskill_id ")
-	private int languagesskill;
+	private int languagesskill_id;
 	
 	//@Id
 	@Column (name= "candidato_id ")
@@ -21,18 +21,18 @@ public class Languages_skill {
 		
 	@ManyToOne
 	@JoinColumn(name= "language_id")
-	private Languages language;
+	private Languages language_id;
 	
 	@ManyToOne
 	@JoinColumn(name= "level_id")
-	private Level level;
+	private Level level_id;
 
-	public int getLanguagesskill() {
-		return languagesskill;
+	public int getLanguagesskill_id() {
+		return languagesskill_id;
 	}
 
-	public void setLanguagesskill(int languagesskill) {
-		this.languagesskill = languagesskill;
+	public void setLanguagesskill_id(int languagesskill_id) {
+		this.languagesskill_id = languagesskill_id;
 	}
 
 	public int getCandidato_id() {
@@ -43,24 +43,23 @@ public class Languages_skill {
 		this.candidato_id = candidato_id;
 	}
 
-	public Languages getLanguage() {
-		return language;
+	public Languages getLanguage_id() {
+		return language_id;
 	}
 
-	public void setLanguage(Languages language) {
-		this.language = language;
+	public void setLanguage_id(Languages language_id) {
+		this.language_id = language_id;
 	}
 
-	public Level getLevel() {
-		return level;
+	public Level getLevel_id() {
+		return level_id;
 	}
 
-	public void setLevel(Level level) {
-		this.level = level;
+	public void setLevel_id(Level level_id) {
+		this.level_id = level_id;
 	}
 
 
-	
 
 
 }
